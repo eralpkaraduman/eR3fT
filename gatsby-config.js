@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/eR3fT",
   siteMetadata: {
     title: `eR3fT`,
-    description: `Eralp's Reacht-thr3e-fiber Template.`,
+    description: `Eralp's Reacht-thr3e-fiber Tryouts.`,
     author: `@eralpkaraduman`,
   },
   plugins: [
