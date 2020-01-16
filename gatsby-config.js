@@ -4,6 +4,7 @@ module.exports = {
     title: `eR3fT`,
     description: `Eralp's Reacht-thr3e-fiber Tryouts.`,
     author: `@eralpkaraduman`,
+    githubUrl: `https://github.com/eralpkaraduman/eR3fT`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

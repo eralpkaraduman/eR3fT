@@ -5,8 +5,8 @@ import SEO from "../components/seo"
 import { useStaticQuery, graphql } from "gatsby"
 
 const IndexPage = () => {
-  const experiments = useStaticQuery(graphql`
-    query ExperimentsQuery {
+  const data = useStaticQuery(graphql`
+    query IndexPageQuery {
       allSitePage(filter: { path: { regex: "/experiments/" } }) {
         edges {
           node {
@@ -21,9 +21,8 @@ const IndexPage = () => {
   return (
     <Layout>
       <SEO title="Home" />
-      <h2>Experiments</h2>
       <ul>
-        {experiments.allSitePage.edges.map(({ node }) => (
+        {data.allSitePage.edges.map(({ node }) => (
           <li key={node.id}>
             <Link to={node.path}>
               {node.internalComponentName.replace("ComponentExperiments", "")}

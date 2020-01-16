@@ -18,6 +18,8 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          description
+          githubUrl
         }
       }
     }
@@ -25,7 +27,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
+      <Header
+        siteTitle={data.site.siteMetadata.title}
+        siteDescription={data.site.siteMetadata.description}
+      />
       <div
         style={{
           margin: `0 auto`,
@@ -36,7 +41,7 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          Open Source On <a href="https://github.com/eralpkaraduman/eR3fT">GitHub</a>
+          Open Source On <a href={data.site.siteMetadata.githubUrl}>GitHub</a>
         </footer>
       </div>
     </>
