@@ -3,7 +3,7 @@
 👉 [eralpkaraduman.github.io/eR3fT](https://eralpkaraduman.github.io/eR3fT)
 
 **E**ralp's
-**R**eacht-thr**3**e-**f**iber
+**R**eact-thr**3**e-**f**iber
 **T**ryout
 
 ```bash
