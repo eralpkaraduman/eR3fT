@@ -20,5 +20,6 @@ gatsby develop
 
 - [x] Box
 - [x] Texture
-- [ ] 3D Text
+- [x] 3D Text
+- [ ] DOM Text
 - [ ] GltfJsx https://github.com/react-spring/gltfjsx
