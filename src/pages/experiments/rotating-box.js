@@ -8,7 +8,7 @@ export default ({ children, width, height }) => {
     <Experiment width={200} height={200} title="Rotating Box">
       <Canvas camera={{ position: [0, 0, 0], fov: 40 }}>
         <rectAreaLight
-          intensity={3}
+          intensity={5}
           position={[0, 0, 0]}
           width={30}
           height={30}
@@ -18,10 +18,6 @@ export default ({ children, width, height }) => {
       </Canvas>
     </Experiment>
   )
-}
-
-export const siteMetadata = {
-  description: "TITLE IN METADATA :DDD",
 }
 
 const Box = () => {
