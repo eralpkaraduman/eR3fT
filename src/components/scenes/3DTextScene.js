@@ -1,6 +1,7 @@
 import React, { useRef, useMemo, Suspense } from "react"
 import * as THREE from "three"
 import { Canvas, useLoader, useUpdate, useFrame } from "react-three-fiber"
+import boldFontUrl from "url-loader!./resources/fonts/bold.blob"
 
 export default () => {
   return (
@@ -49,7 +50,7 @@ const TextObject = ({
     const { current: mesh } = ref
     mesh.rotation.y += rotationFactor
   })
-  const font = useLoader(THREE.FontLoader, "/fonts/bold.blob")
+  const font = useLoader(THREE.FontLoader, boldFontUrl)
   const config = useMemo(
     () => ({
       font,
@@ -62,7 +63,7 @@ const TextObject = ({
       bevelOffset: 0,
       bevelSegments: 8,
     }),
-    [font]
+    [font, height, size]
   )
   const mesh = useUpdate(self => {
     const size = new THREE.Vector3()

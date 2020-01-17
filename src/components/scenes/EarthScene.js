@@ -2,6 +2,7 @@ import React, { Suspense } from "react"
 
 import * as THREE from "three"
 import { Canvas, useFrame, useLoader } from "react-three-fiber"
+import earthTextureUrl from "./resources/textures/earth.jpg"
 
 export default () => {
   return (
@@ -14,7 +15,7 @@ export default () => {
 }
 
 const Earth = () => {
-  const [texture] = useLoader(THREE.TextureLoader, ["/textures/earth.jpg"])
+  const [texture] = useLoader(THREE.TextureLoader, [earthTextureUrl])
   const ref = React.useRef()
   useFrame(() => {
     const { current: mesh } = ref

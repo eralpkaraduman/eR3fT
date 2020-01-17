@@ -1,4 +1,4 @@
-import React, { useMemo, Suspense } from "react"
+import React from "react"
 import Experiment from "../../components/experiment"
 import Scene from "../../components/scenes/3DTextScene"
 
