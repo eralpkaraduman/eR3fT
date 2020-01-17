@@ -7,14 +7,7 @@
 **T**ryouts
 
 ```bash
-#          _____  ____   __ _______
-#         |  __ \|___ \ / _|__   __|
-#      ___| |__) | __) | |_   | |
-#     / _ \  _  / |__ <|  _|  | |
-#    |  __/ | \ \ ___) | |    | |
-#     \___|_|  \_\____/|_|    |_| feat. *GatsbyJS
-
-# Install Gatsby CLI
+# Install Gatsby CLI *
 npm install -g gatsby-cli
 
 # Run Locally
