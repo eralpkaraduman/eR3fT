@@ -1,12 +1,11 @@
-import React from "react"
+import React, { useMemo } from "react"
 import Experiment from "../../components/experiment"
 import * as THREE from "three"
 import { Canvas, useFrame } from "react-three-fiber"
 
-const boxSize = 50
-const boxPositionZ = -100
-
-export default ({ children, width, height }) => {
+export default () => {
+  const boxPosition = [0, 0, -100]
+  const boxSize = 50
   return (
     <Experiment width={200} height={200} title="Rotating Box">
       <Canvas>
@@ -15,23 +14,23 @@ export default ({ children, width, height }) => {
           width={100}
           height={100}
           position={[0, 0, 0]}
-          onUpdate={self => self.lookAt(new THREE.Vector3(0, 0, boxPositionZ))}
+          onUpdate={self => self.lookAt(new THREE.Vector3(...boxPosition))}
         />
-        <Box />
+        <Box position={boxPosition} size={boxSize} />
       </Canvas>
     </Experiment>
   )
 }
 
-const Box = () => {
+const Box = ({ position, size }) => {
   const ref = React.useRef()
   useFrame(() => {
     const { current: mesh } = ref
     mesh.rotation.x = mesh.rotation.y += 0.01
   })
   return (
-    <mesh ref={ref} position={[0, 0, boxPositionZ]}>
-      <boxBufferGeometry attach="geometry" args={[boxSize, boxSize, boxSize]} />
+    <mesh ref={ref} position={position}>
+      <boxBufferGeometry attach="geometry" args={[size, size, size]} />
       <meshStandardMaterial color={0xffffff} attach="material" />
     </mesh>
   )
