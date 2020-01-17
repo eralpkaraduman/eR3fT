@@ -1,5 +1,4 @@
 import React, { useMemo } from "react"
-import Experiment from "../../components/experiment"
 import * as THREE from "three"
 import { Canvas, useFrame } from "react-three-fiber"
 
@@ -7,18 +6,16 @@ export default () => {
   const boxPosition = [0, 0, -100]
   const boxSize = 50
   return (
-    <Experiment width={200} height={200} title="Rotating Box">
-      <Canvas>
-        <rectAreaLight
-          intensity={2}
-          width={100}
-          height={100}
-          position={[0, 0, 0]}
-          onUpdate={self => self.lookAt(new THREE.Vector3(...boxPosition))}
-        />
-        <Box position={boxPosition} size={boxSize} />
-      </Canvas>
-    </Experiment>
+    <Canvas>
+      <rectAreaLight
+        intensity={2}
+        width={100}
+        height={100}
+        position={[0, 0, 0]}
+        onUpdate={self => self.lookAt(new THREE.Vector3(...boxPosition))}
+      />
+      <Box position={boxPosition} size={boxSize} />
+    </Canvas>
   )
 }
 
