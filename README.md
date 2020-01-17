@@ -23,3 +23,9 @@ gatsby develop
 - [x] 3D Text
 - [ ] DOM Text
 - [ ] GltfJsx https://github.com/react-spring/gltfjsx
+
+## TODO:
+
+- [ ] Convert experiment pages to mdx
+- [ ] Extract experiment title from mdx
+- [ ] Remove component name query from index
