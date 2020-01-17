@@ -30,6 +30,7 @@ const styles = {
     border: `1px solid black`,
     borderRadius: `5px`,
     marginBottom: `1.45rem`,
+    backgroundColor: "black",
   },
 }
 
