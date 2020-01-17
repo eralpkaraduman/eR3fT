@@ -15,3 +15,10 @@ gatsby develop
 ```
 
 \*_Built with [GatsbyJS](http://gatsbyjs.org) not because it is required, because its defaults are nice_
+
+## Experiments
+
+- [x] Box
+- [x] Texture
+- [ ] 3D Text
+- [ ] GltfJsx https://github.com/react-spring/gltfjsx
