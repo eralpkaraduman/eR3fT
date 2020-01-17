@@ -4,7 +4,7 @@
 
 **E**ralp's
 **R**eact-thr**3**e-**f**iber
-**T**ryout
+**T**ryouts
 
 ```bash
 #          _____  ____   __ _______
