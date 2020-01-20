@@ -1,7 +1,8 @@
 import React, { useRef, useMemo, Suspense } from "react"
 import * as THREE from "three"
-import { Canvas, useLoader, useUpdate, useFrame } from "react-three-fiber"
-import boldFontUrl from "url-loader!./resources/fonts/bold.blob"
+import { Canvas, useLoader, useUpdate, useFrame, Dom } from "react-three-fiber"
+import getPrefixedPath from "../../getPrefixedPath"
+const fontUrl = getPrefixedPath("/fonts/bold.blob")
 
 export default () => {
   return (
@@ -12,7 +13,13 @@ export default () => {
         height={300}
         position={[0, 100, 250]}
       />
-      <Suspense fallback={null}>
+      <Suspense
+        fallback={
+          <Dom center>
+            <div>loading</div>
+          </Dom>
+        }
+      >
         <TextObject
           text={"3D"}
           color={0x0000ff}
@@ -50,7 +57,7 @@ const TextObject = ({
     const { current: mesh } = ref
     mesh.rotation.y += rotationFactor
   })
-  const font = useLoader(THREE.FontLoader, boldFontUrl)
+  const font = useLoader(THREE.FontLoader, fontUrl)
   const config = useMemo(
     () => ({
       font,

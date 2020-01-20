@@ -1,13 +1,20 @@
 import React, { Suspense } from "react"
 
 import * as THREE from "three"
-import { Canvas, useFrame, useLoader } from "react-three-fiber"
-import earthTextureUrl from "./resources/textures/earth.jpg"
+import { Canvas, useFrame, useLoader, Dom } from "react-three-fiber"
+import getPrefixedPath from "../../getPrefixedPath"
+const textureUrl = getPrefixedPath("/textures/earth.jpg")
 
 export default () => {
   return (
     <Canvas pixelRatio={3}>
-      <Suspense fallback={null}>
+      <Suspense
+        fallback={
+          <Dom center>
+            <div>loading</div>
+          </Dom>
+        }
+      >
         <Earth />
       </Suspense>
     </Canvas>
@@ -15,7 +22,7 @@ export default () => {
 }
 
 const Earth = () => {
-  const [texture] = useLoader(THREE.TextureLoader, [earthTextureUrl])
+  const [texture] = useLoader(THREE.TextureLoader, [textureUrl])
   const ref = React.useRef()
   useFrame(() => {
     const { current: mesh } = ref

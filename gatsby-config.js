@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/eR3fT",
   siteMetadata: {
     title: `eR3fT`,
-    description: `Eralp's Reacht-thr3e-fiber Tryouts.`,
+    description: `Eralp's React-thr3e-fiber Tryouts.`,
     author: `@eralpkaraduman`,
     githubUrl: `https://github.com/eralpkaraduman/eR3fT`,
   },
